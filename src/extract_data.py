@@ -1,5 +1,3 @@
-import pandas as pd
-import numpy as np
 import xml.etree.ElementTree as et
 from neo4j import GraphDatabase
 import logging
@@ -150,7 +148,6 @@ class App:
 tree = et.parse('Q9Y261.xml')
 root = tree.getroot()
 
-print(root.tag)
 #accession
 accessionValue = []
 for accession in root.iter("{http://uniprot.org/uniprot}accession"):
